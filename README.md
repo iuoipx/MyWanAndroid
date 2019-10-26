@@ -10,7 +10,7 @@ App截图
 ![image](https://github.com/iuoipx/MyWanAndroid/blob/master/images/截图/3.jpg)
 ![image](https://github.com/iuoipx/MyWanAndroid/blob/master/images/截图/4.jpg)
 
-使用到的插件
+项目使用到的插件：
 
 flutter_swiper: ^1.1.6  轮播图
 
