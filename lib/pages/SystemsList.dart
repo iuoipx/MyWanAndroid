@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:mywanandroid/utils/StringUtil.dart';
 import 'package:mywanandroid/widgets/ArticleListItem.dart';
 import '../widgets/LoadingWidget.dart';
 import '../models/ArticleModel.dart';
@@ -147,7 +146,7 @@ class _SystemsListState extends State<SystemsList> {
               return Column(
                 children: <Widget>[
                   ArticleListItemWidget(
-                    title: StringUtil.strClean(this._articleData[index].title),
+                    title: this._articleData[index].title,
                     time: this._articleData[index].niceDate,
                     author: this._articleData[index].author,
                     superChapterName: this._articleData[index].superChapterName,

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mywanandroid/api/Api.dart';
 import 'package:mywanandroid/models/WeChatModel.dart';
-import 'package:mywanandroid/utils/StringUtil.dart';
 import 'package:mywanandroid/widgets/WeChatListItem.dart';
 
 class WeChatList extends StatefulWidget {
@@ -128,7 +127,7 @@ class _WeChatListState extends State<WeChatList> with AutomaticKeepAliveClientMi
            return Column(
              children: <Widget>[
                WeChatListItemWidget(
-                title: StringUtil.strClean(this._weChatListData[index].title),
+                title: this._weChatListData[index].title,
                 time: this._weChatListData[index].niceDate,
                 author: this._weChatListData[index].author,
                 superChapterName: this._weChatListData[index].superChapterName,

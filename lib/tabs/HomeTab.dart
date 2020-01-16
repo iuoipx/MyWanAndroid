@@ -9,7 +9,6 @@ import '../widgets/LoadingWidget.dart';
 import '../widgets/ArticleListItem.dart';
 import '../models/ArticleModel.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import '../utils/StringUtil.dart';
 import '../models/TopArticleModel.dart';
 
 class HomeTab extends StatefulWidget {
@@ -179,7 +178,7 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin{
           return Column(
             children: <Widget>[
               ArticleListItemWidget(
-                title: StringUtil.strClean(this._articleData[index].title),
+                title: this._articleData[index].title,
                 time: this._articleData[index].niceDate,
                 author: this._articleData[index].author,
                 superChapterName: this._articleData[index].superChapterName,
@@ -206,7 +205,7 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin{
       child: Column(
         children: this._topArticleData.map((value){
           return ArticleListItemWidget(
-            title: StringUtil.strClean(value.title),
+            title: value.title,
             time: value.niceDate,
             author: value.author,
             superChapterName: value.superChapterName,

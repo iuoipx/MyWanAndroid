@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mywanandroid/fonts/IconF.dart';
 import '../services/ScreenAdapter.dart';
+import '../utils/StringUtil.dart';
 
 class ProjectListItemWidget extends StatelessWidget {
   final String title;
@@ -38,7 +39,7 @@ class ProjectListItemWidget extends StatelessWidget {
               children: <Widget>[
                 Container(
                   child: Text(
-                    '${this.title}',
+                    StringUtil.strClean(this.title),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: ScreenAdapter.size(32)
@@ -48,7 +49,7 @@ class ProjectListItemWidget extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    '${this.desc}',
+                    StringUtil.strClean(this.desc),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(

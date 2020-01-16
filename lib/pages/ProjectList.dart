@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../api/Api.dart';
 import '../models/ProjectListModel.dart';
-import '../utils/StringUtil.dart';
 import '../widgets/ProjectListItem.dart';
 
 class ProjectList extends StatefulWidget {
@@ -129,8 +128,8 @@ class _ProjectListState extends State<ProjectList> with AutomaticKeepAliveClient
            return Column(
              children: <Widget>[
                ProjectListItemWidget(
-                title: StringUtil.strClean(this._projectListData[index].title),
-                desc: StringUtil.strClean(this._projectListData[index].desc),
+                title: this._projectListData[index].title,
+                desc: this._projectListData[index].desc,
                 time: this._projectListData[index].niceDate,
                 author: this._projectListData[index].author,
                 superChapterName: this._projectListData[index].superChapterName,

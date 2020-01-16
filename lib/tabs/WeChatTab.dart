@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mywanandroid/pages/WeChatList.dart';
-import 'package:mywanandroid/utils/StringUtil.dart';
 import 'package:mywanandroid/widgets/LoadingWidget.dart';
 import '../api/Api.dart';
 import 'package:dio/dio.dart';
@@ -64,7 +63,7 @@ class _WeChatTabState extends State<WeChatTab> with SingleTickerProviderStateMix
     return this._weChatData?.map((value){
       return Tab(
         child: Text(
-          StringUtil.strClean(value.name),
+          value.name,
         ),
       );
     })?.toList();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mywanandroid/fonts/IconF.dart';
+import 'package:mywanandroid/utils/StringUtil.dart';
 import '../services/ScreenAdapter.dart';
 
 class ArticleListItemWidget extends StatelessWidget {
@@ -40,7 +41,7 @@ class ArticleListItemWidget extends StatelessWidget {
               children: <Widget>[
                 Container(
                   child: Text(
-                    '${this.title}',
+                    StringUtil.strClean(this.title),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: ScreenAdapter.size(32)

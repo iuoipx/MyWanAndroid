@@ -6,7 +6,6 @@ import '../services/ScreenAdapter.dart';
 import '../api/Api.dart';
 import 'package:dio/dio.dart';
 import '../widgets/ArticleListItem.dart';
-import '../utils/StringUtil.dart';
 import '../widgets/LoadingWidget.dart';
 
 class SearchResult extends StatefulWidget {
@@ -106,6 +105,7 @@ class _SearchResultState extends State<SearchResult> {
 
 
   TextEditingController _words=TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -207,7 +207,7 @@ class _SearchResultState extends State<SearchResult> {
                 return Column(
                   children: <Widget>[
                     ArticleListItemWidget(
-                      title: StringUtil.strClean(this._articleData[index].title),
+                      title: this._articleData[index].title,
                       time: this._articleData[index].niceDate,
                       author: this._articleData[index].author,
                       superChapterName: this._articleData[index].superChapterName,

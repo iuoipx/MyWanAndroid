@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:mywanandroid/widgets/LoadingWidget.dart';
 import '../api/Api.dart';
 import '../models/SquareModel.dart';
-import '../utils/StringUtil.dart';
 import '../widgets/SquareListItem.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -140,7 +139,7 @@ class _SquareTabState extends State<SquareTab> with AutomaticKeepAliveClientMixi
               return Column(
                 children: <Widget>[
                   SquareListItemWidget(
-                    title: StringUtil.strClean(this._squareListData[index].title),
+                    title: this._squareListData[index].title,
                     time: this._squareListData[index].niceDate,
                     shareUser: this._squareListData[index].shareUser.length>10
                       ?this._squareListData[index].shareUser.substring(0,10)+'..'
